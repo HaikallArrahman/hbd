@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Fredoka:wght@500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream-bg: #FFF9F2;
+      --cream-warm: #FDF2E4;
+      --cream-border: #F7E4CE;
+      --pink-soft: #FFF0F5;
+      --pink-pastel: #FFD6E5;
+      --pink-main: #F06292;
+      --pink-deep: #C2185B;
+      --pink-card: #E86F9A;
+      --pink-card-dark: #D95B87;
+      --text-rose: #6D1B3B;
+      --white-pure: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--cream-bg);
+      background-image:
+        radial-gradient(ellipse at 18% 22%, rgba(255, 194, 214, 0.48) 0%, transparent 55%),
+        radial-gradient(ellipse at 82% 18%, rgba(253, 232, 209, 0.7) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 55%, rgba(255, 240, 246, 0.85) 0%, transparent 60%),
+        radial-gradient(ellipse at 22% 82%, rgba(255, 214, 229, 0.5) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 85%, rgba(253, 238, 220, 0.65) 0%, transparent 50%),
+        linear-gradient(135deg, #FFFDF9 0%, #FFF0F5 48%, #FDF3E6 100%);
+      background-attachment: fixed;
+      color: var(--text-rose);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Subtle cream & blush watercolor paper overlay */
+    .paper-texture {
+      background-image:
+        radial-gradient(circle at 25% 30%, rgba(240, 98, 146, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 75% 70%, rgba(245, 214, 180, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 40%);
+    }
+
+    .font-script {
+      font-family: 'Great Vibes', 'Alex Brush', cursive;
+    }
+
+    .font-display {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .font-serif-body {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    .font-pixel {
+      font-family: 'Silkscreen', monospace;
+    }
+
+    /* Oktober Sticker Text Effect (Pink, White & Cream) */
+    .oktober-sticker {
+      font-family: 'Great Vibes', cursive;
+      color: #D83A6F;
+      paint-order: stroke fill;
+      -webkit-text-stroke: 8px #FFFDF9;
+      filter:
+        drop-shadow(2px 0 0 #F48FB1)
+        drop-shadow(-2px 0 0 #F48FB1)
+        drop-shadow(0 2px 0 #F48FB1)
+        drop-shadow(0 -2px 0 #F48FB1)
+        drop-shadow(2px 4px 8px rgba(216, 58, 111, 0.28));
+    }
+
+    /* Pink & Cream Pill Button (Open / Back) */
+    .btn-black-pill {
+      background: linear-gradient(135deg, #FF8FAB 0%, #E05282 100%);
+      color: #FFFDF9;
+      border-radius: 9999px;
+      padding: 10px 44px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2.5px;
+      border: 3px solid #FFF8EE;
+      box-shadow: 0 8px 20px rgba(224, 82, 130, 0.3), 0 0 0 2px #FFB3C6;
+      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-black-pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      background: linear-gradient(135deg, #FF7597 0%, #C93B6B 100%);
+      box-shadow: 0 12px 24px rgba(224, 82, 130, 0.4), 0 0 0 2px #FF8FAB;
+    }
+    .btn-black-pill:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    /* 6 Menu Grid Icon Buttons (Creamy White & Pastel Pink) */
+    .menu-icon-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F2 100%);
+      border: 3.5px solid #FFADC6;
+      border-radius: 26px;
+      aspect-ratio: 1.08 / 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      box-shadow: inset 0 2px 6px rgba(255, 182, 193, 0.2), 0 6px 14px rgba(194, 24, 91, 0.16);
+      transition: transform 0.26s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+    .menu-icon-card:hover {
+      transform: translateY(-6px) scale(1.05);
+      border-color: #FFFDF9;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF0F5 100%);
+      box-shadow: 0 12px 24px rgba(194, 24, 91, 0.25);
+    }
+    .menu-icon-card:active {
+      transform: translateY(1px) scale(0.97);
+    }
+
+    /* Page View Transitions */
+    .view-page {
+      animation: fadeSlideIn 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Envelope float & hover */
+    @keyframes floatGentle {
+      0%, 100% { transform: rotate(-3deg) translateY(0px); }
+      50% { transform: rotate(-1.2deg) translateY(-9px); }
+    }
+    .envelope-float {
+      animation: floatGentle 3.8s ease-in-out infinite;
+    }
+
+    /* Candle Flame Flicker */
+    @keyframes candleFlicker {
+      0%, 100% { transform: scale(1) rotate(-1deg); opacity: 1; }
+      25% { transform: scale(1.06, 0.94) rotate(2deg); opacity: 0.9; }
+      50% { transform: scale(0.95, 1.08) rotate(-2deg); opacity: 1; }
+      75% { transform: scale(1.04, 0.96) rotate(1deg); opacity: 0.94; }
+    }
+    .flame-anim {
+      animation: candleFlicker 0.9s infinite ease-in-out;
+      transform-origin: bottom center;
+    }
+
+    /* Pixel Speech Bubble in Cream & Pink */
+    .pixel-bubble {
+      position: relative;
+      background: #FFFDF9;
+      border: 4px solid #E05282;
+      box-shadow:
+        -4px 0 0 0 #E05282,
+        4px 0 0 0 #E05282,
+        0 -4px 0 0 #E05282,
+        0 4px 0 0 #E05282,
+        0 10px 24px rgba(224, 82, 130, 0.18);
+    }
+
+    /* Song Card Hover (Sweet Pink & Cream) */
+    .song-card {
+      background: linear-gradient(135deg, #E86F9A 0%, #D95383 100%);
+      border: 3px solid #FFF8EE;
+      border-radius: 30px;
+      box-shadow: 0 10px 24px rgba(217, 83, 131, 0.22);
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.25s ease;
+      cursor: pointer;
+    }
+    .song-card:hover {
+      transform: translateY(-4px) scale(1.015);
+      background: linear-gradient(135deg, #F07CA5 0%, #E05A8A 100%);
+      box-shadow: 0 14px 28px rgba(217, 83, 131, 0.32);
+    }
+    .song-card.playing {
+      outline: 3.5px solid #C2185B;
+      box-shadow: 0 14px 30px rgba(194, 24, 91, 0.35);
+    }
+
+    /* ==================== SCROLL REVEAL ANIMATIONS ==================== */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(36px) scale(0.97);
+      transition:
+        opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.reveal-left {
+      transform: translateX(-42px) translateY(16px) rotate(-2deg);
+    }
+    .scroll-reveal.reveal-right {
+      transform: translateX(42px) translateY(16px) rotate(2deg);
+    }
+    .scroll-reveal.reveal-scale {
+      transform: translateY(24px) scale(0.88);
+    }
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    }
+
+    /* Stagger delays for grid items & list items */
+    .stagger-1 { transition-delay: 60ms; }
+    .stagger-2 { transition-delay: 130ms; }
+    .stagger-3 { transition-delay: 200ms; }
+    .stagger-4 { transition-delay: 270ms; }
+    .stagger-5 { transition-delay: 340ms; }
+    .stagger-6 { transition-delay: 410ms; }
+
+    /* Top Scroll Progress Bar */
+    #scrollProgressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 0%;
+      background: linear-gradient(90deg, #FFD6E5 0%, #FF8FAB 50%, #E05282 100%);
+      z-index: 60;
+      transition: width 0.1s ease-out;
+      box-shadow: 0 2px 8px rgba(224, 82, 130, 0.35);
+    }
+  
+    /* Gift Passcode Modal & Shake Animation */
+    @keyframes pinShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .pin-shake {
+      animation: pinShake 0.4s ease-in-out;
+    }
+    .pin-dot {
+      width: 48px;
+      height: 54px;
+      border-radius: 16px;
+      border: 3px solid #FFADC6;
+      background: #FFFDF9;
+      color: #8C1D46;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 2px 5px rgba(240, 98, 146, 0.1);
+      transition: all 0.2s ease;
+    }
+    .pin-dot.filled {
+      border-color: #E05282;
+      background: #FFF0F5;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(224, 82, 130, 0.2);
+    }
+    .pin-key {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F2 100%);
+      border: 2.5px solid #FFADC6;
+      border-radius: 18px;
+      height: 50px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #7A1C3E;
+      box-shadow: 0 4px 0 #F48FB1;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .pin-key:hover {
+      background: #FFF0F5;
+      border-color: #E05282;
+      transform: translateY(-2px);
+    }
+    .pin-key:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #F48FB1;
+    }
+
+  </style>
+</head>
+<body class="paper-texture selection:bg-pink-200 selection:text-[#6D1B3B]">
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar" aria-hidden="true"></div>
+  <!-- Ambient Pink, White & Cream Floating Hearts Canvas -->
+  <canvas id="pinkCreamCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Floating Music Control Button (Always Accessible) -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <button
+      type="button"
+      id="btnMusicToggle"
+      aria-label="Play or Pause Happy Birthday Music"
+      class="bg-gradient-to-r from-[#FF8FAB] to-[#E05282] text-[#FFFDF9] px-4 py-2 rounded-full shadow-[0_6px_16px_rgba(224,82,130,0.3)] flex items-center gap-2 text-xs font-bold tracking-wide hover:from-[#FF7597] hover:to-[#C93B6B] active:scale-95 transition cursor-pointer border-2 border-[#FFF8EE]"
+    >
+      <!-- Music Icon SVG -->
+      <svg id="iconMusicPlaying" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+      <span id="musicStatusLabel">Play Happy Birthday</span>
+    </button>
+  </div>
+
+  <!-- =====================================================================
+       VIEW 1: COVER / OPENING SCREEN (Matches 1.jpg)
+       ===================================================================== -->
+  <main id="view-cover" class="view-page min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center">
+    <div class="max-w-md w-full mx-auto flex flex-col items-center space-y-10">
+
+      <!-- Title: Happy Birthday / My Love -->
+      <div class="space-y-0 select-none scroll-reveal reveal-scale">
+        <h1 class="font-script text-6xl sm:text-7xl text-[#8C1D46] leading-none tracking-normal drop-shadow-sm">
+          Happy Birthday
+        </h1>
+        <p class="font-script text-6xl sm:text-7xl text-[#E05282] leading-tight -mt-1 drop-shadow-sm">
+          My Love
+        </p>
+      </div>
+
+      <!-- Center Gray Envelope Illustration (Clickable) -->
+      <div
+        id="coverEnvelopeClick"
+        role="button"
+        tabindex="0"
+        aria-label="Open Birthday Card"
+        class="envelope-float cursor-pointer group py-2 focus:outline-none scroll-reveal stagger-2"
+      >
+        <div class="relative w-64 sm:w-72 aspect-[1.42/1] mx-auto transition-transform duration-300 group-hover:scale-105">
+          <!-- Crisp Vector Gray Envelope matching 1.jpg -->
+          <svg viewBox="0 0 320 225" class="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.28)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="envBodyGrad" x1="0" y1="0" x2="320" y2="225" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFD6E5" />
+                <stop offset="50%" stop-color="#FFB3C6" />
+                <stop offset="100%" stop-color="#FF8FAB" />
+              </linearGradient>
+              <linearGradient id="envLeftFlap" x1="0" y1="110" x2="160" y2="225" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFC2D4" />
+                <stop offset="100%" stop-color="#F48FB1" />
+              </linearGradient>
+              <linearGradient id="envRightFlap" x1="320" y1="110" x2="160" y2="225" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFB8CE" />
+                <stop offset="100%" stop-color="#EC709A" />
+              </linearGradient>
+              <linearGradient id="envBottomFlap" x1="160" y1="105" x2="160" y2="225" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF0F5" />
+                <stop offset="100%" stop-color="#FFC2D4" />
+              </linearGradient>
+              <linearGradient id="envTopFlap" x1="160" y1="8" x2="160" y2="145" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFFDF9" />
+                <stop offset="65%" stop-color="#FFF3E6" />
+                <stop offset="100%" stop-color="#FFD6E5" />
+              </linearGradient>
+              <filter id="flapShadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#C2185B" flood-opacity="0.28" />
+              </filter>
+            </defs>
+
+            <!-- Base Rectangle -->
+            <rect x="6" y="8" width="308" height="208" rx="6" fill="url(#envBodyGrad)" stroke="#E05282" stroke-width="1.5" />
+
+            <!-- Left Fold Triangle -->
+            <path d="M6 12 L152 122 L6 216 Z" fill="url(#envLeftFlap)" />
+            <!-- Right Fold Triangle -->
+            <path d="M314 12 L168 122 L314 216 Z" fill="url(#envRightFlap)" />
+
+            <!-- Bottom Fold Flap -->
+            <path d="M6 216 L146 112 Q160 102 174 112 L314 216 Z" fill="url(#envBottomFlap)" stroke="#FFF8EE" stroke-width="1.2" />
+
+            <!-- Top Closed Flap with Shadow -->
+            <path
+              d="M6 10 Q6 8 10 8 L310 8 Q314 8 314 10 L174 134 Q160 146 146 134 Z"
+              fill="url(#envTopFlap)"
+              filter="url(#flapShadow)"
+              stroke="#F48FB1"
+              stroke-width="1"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Open Button -->
+      <div>
+        <button type="button" id="btnOpenCover" class="btn-black-pill">
+          Open
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =====================================================================
+       VIEW 2: BERANDA - SCROLLABLE CALENDAR & 6-BUTTON MENU (Matches Beranda.jpg)
+       ===================================================================== -->
+  <section id="view-beranda" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-12 sm:py-16 space-y-24">
+
+    <!-- PART 1: CALENDAR SECTION -->
+    <div class="flex flex-col items-center text-center space-y-8 pt-2">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#7A1C3E] leading-snug tracking-tight">
+        Hariii ini hari bahagia<br />kamuuu
+      </h2>
+
+      <!-- Calendar Card Wrapper -->
+      <div class="relative w-full max-w-[350px] sm:max-w-[380px] mx-auto pt-4 scroll-reveal reveal-scale stagger-1">
+        <!-- Overlapping "Oktober" Script Sticker on Top Right -->
+        <div class="absolute -top-3 right-2 sm:-right-3 z-20 select-none pointer-events-none">
+          <span class="oktober-sticker text-5xl sm:text-6xl block">Oktober</span>
+        </div>
+
+        <!-- Dark Rounded Square Calendar Card -->
+        <div class="bg-gradient-to-br from-[#F078A0] via-[#E5638E] to-[#D64B7A] text-[#FFFDF9] border-4 border-[#FFF8EE] rounded-[38px] p-6 sm:p-8 pt-10 sm:pt-12 shadow-[0_16px_34px_rgba(214,75,122,0.26)]">
+          <!-- Days of Week Header -->
+          <div class="grid grid-cols-7 gap-1 text-center font-display font-bold text-sm sm:text-base tracking-wider text-white/95 mb-4">
+            <div>S</div>
+            <div>M</div>
+            <div>T</div>
+            <div>W</div>
+            <div>T</div>
+            <div>F</div>
+            <div>S</div>
+          </div>
+
+          <!-- Dates Grid (1 starts on Thursday, 16 highlighted in white heart) -->
+          <div class="grid grid-cols-7 gap-y-3 gap-x-1 items-center justify-items-center text-center font-display font-bold text-sm sm:text-base">
+            <!-- Empty Sun-Wed -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <!-- Date 16 Inside White Heart -->
+            <div class="relative flex items-center justify-center w-10 h-10 -my-2">
+              <svg viewBox="0 0 36 34" class="w-10 h-10 text-white fill-current drop-shadow-sm">
+                <path d="M18 32.5C18 32.5 2.5 22.8 2.5 11.2C2.5 5.4 7 1.5 11.8 1.5C14.9 1.5 17.1 3.3 18 5.2C18.9 3.3 21.1 1.5 24.2 1.5C29 1.5 33.5 5.4 33.5 11.2C33.5 22.8 18 32.5 18 32.5Z" />
+              </svg>
+              <span class="absolute inset-0 flex items-center justify-center text-[#C2185B] font-extrabold text-xs sm:text-sm pb-0.5">
+                16
+              </span>
+            </div>
+            <div>17</div>
+
+            <div>18</div>
+            <div>19</div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+
+            <div>25</div>
+            <div>26</div>
+            <div>27</div>
+            <div>28</div>
+            <div>29</div>
+            <div>30</div>
+            <div>31</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Down Hint -->
+      <a
+        href="#menuChooserSection"
+        id="btnScrollToMenu"
+        class="inline-flex flex-col items-center gap-1 text-[#C2185B] hover:text-[#7A1C3E] transition pt-2 text-xs font-bold tracking-wider uppercase"
+      >
+        <span>Scroll ke bawah</span>
+        <svg class="w-5 h-5 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- PART 2: 6-BUTTON MENU CHOOSER SECTION (Scroll down in Beranda.jpg) -->
+    <div id="menuChooserSection" class="flex flex-col items-center text-center space-y-8 pt-4 pb-12 scroll-reveal">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#7A1C3E] leading-snug tracking-tight">
+        Pilih aja mau buka yang<br />mana dulu?<br />xixixi
+      </h2>
+
+      <!-- Dark Rounded Container with 2x3 Grid of White Icon Buttons -->
+      <div class="bg-gradient-to-br from-[#F078A0] via-[#E5638E] to-[#D64B7A] border-4 border-[#FFF8EE] rounded-[42px] p-6 sm:p-8 w-full max-w-[340px] sm:max-w-[370px] mx-auto shadow-[0_16px_34px_rgba(214,75,122,0.28)]">
+        <div class="grid grid-cols-2 gap-4 sm:gap-5">
+
+          <!-- Button 1: Top-Left -> Birthday Cake Icon (Opens Birthday Wish) -->
+          <button
+            type="button"
+            data-open-view="view-wish"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-1"
+            aria-label="Birthday Wish"
+            title="Birthday Wish"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 text-[#6D1B3B] transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Plate -->
+              <ellipse cx="32" cy="54" rx="26" ry="5" fill="#FFF3E4" stroke="#9E2A50" stroke-width="2.5"/>
+              <!-- Cake Bottom Tier -->
+              <path d="M12 36v15c0 3 9 5.5 20 5.5s20-2.5 20-5.5V36" fill="#FF8FAB" stroke="#9E2A50" stroke-width="2.5"/>
+              <!-- Cake Middle Cream Stripe -->
+              <path d="M12 43c0 3 9 5.5 20 5.5s20-2.5 20-5.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+              <!-- Cake Top Frosting -->
+              <ellipse cx="32" cy="36" rx="20" ry="6" fill="#FFFDF9" stroke="#9E2A50" stroke-width="2.5"/>
+              <!-- Frosting Drips -->
+              <path d="M14 38c2 4 5 4 7 0 2 5 6 5 8 0 2 5 6 5 9 0 2 4 5 4 7 0 2 3 4 3 5-1" stroke="#9E2A50" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <!-- 5 Candles -->
+              <rect x="20" y="20" width="3" height="14" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.8"/>
+              <rect x="26" y="18" width="3" height="15" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.8"/>
+              <rect x="31" y="16" width="3" height="17" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.8"/>
+              <rect x="36" y="18" width="3" height="15" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.8"/>
+              <rect x="42" y="20" width="3" height="14" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.8"/>
+              <!-- Candle Flames -->
+              <path d="M21.5 14c1.5 2.5 1.5 4.5 0 5.5-1.5-1-1.5-3 0-5.5z" fill="#D83A6F"/>
+              <path d="M27.5 12c1.5 2.5 1.5 4.5 0 5.5-1.5-1-1.5-3 0-5.5z" fill="#D83A6F"/>
+              <path d="M32.5 10c1.5 2.5 1.5 4.5 0 5.5-1.5-1-1.5-3 0-5.5z" fill="#D83A6F"/>
+              <path d="M37.5 12c1.5 2.5 1.5 4.5 0 5.5-1.5-1-1.5-3 0-5.5z" fill="#D83A6F"/>
+              <path d="M43.5 14c1.5 2.5 1.5 4.5 0 5.5-1.5-1-1.5-3 0-5.5z" fill="#D83A6F"/>
+            </svg>
+          </button>
+
+          <!-- Button 2: Top-Right -> Open Envelope Icon (Opens Letter for you) -->
+          <button
+            type="button"
+            data-open-view="view-letter"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-2"
+            aria-label="Letter for you"
+            title="Letter for you"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 text-[#6D1B3B] transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Open Flap Back -->
+              <path d="M10 26L32 9L54 26v26a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V26z" fill="#E05282" stroke="#8C1D46" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- White Letter Card Inside -->
+              <rect x="16" y="21" width="32" height="24" rx="2" fill="#FFFDF9" stroke="#8C1D46" stroke-width="2"/>
+              <line x1="21" y1="27" x2="43" y2="27" stroke="#F06292" stroke-width="2" stroke-linecap="round"/>
+              <line x1="21" y1="32" x2="39" y2="32" stroke="#FFB3C6" stroke-width="2" stroke-linecap="round"/>
+              <!-- Envelope Front Flaps -->
+              <path d="M10 26l22 15 22-15v26a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V26z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 54l18-15M54 54L36 39" stroke="#FFF8EE" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- Button 3: Middle-Left -> Retro Camera Icon (Opens Our Memories) -->
+          <button
+            type="button"
+            data-open-view="view-memories"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-3"
+            aria-label="Our Memories"
+            title="Our Memories"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 text-[#6D1B3B] transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g transform="rotate(-8 32 32)">
+                <!-- Camera Top Controls -->
+                <rect x="14" y="16" width="10" height="5" rx="1.5" fill="#F48FB1" stroke="#8C1D46" stroke-width="2"/>
+                <path d="M26 16l3-4h10l3 4z" fill="#FFF3E4" stroke="#8C1D46" stroke-width="2" stroke-linejoin="round"/>
+                <!-- Camera Body -->
+                <rect x="9" y="20" width="46" height="30" rx="5" fill="#FFFDF9" stroke="#8C1D46" stroke-width="2.5"/>
+                <!-- Black Leather Grip Band -->
+                <rect x="9" y="27" width="46" height="17" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2"/>
+                <!-- Camera Lens Outer & Inner -->
+                <circle cx="33" cy="35" r="11" fill="#FFF8EE" stroke="#8C1D46" stroke-width="2.5"/>
+                <circle cx="33" cy="35" r="7.5" fill="#C2185B" stroke="#8C1D46" stroke-width="2"/>
+                <circle cx="30.5" cy="32.5" r="2" fill="#ffffff"/>
+                <!-- Viewfinder -->
+                <rect x="43" y="22" width="7" height="4" rx="1" fill="#fff" stroke="#9E2A50" stroke-width="1.5"/>
+              </g>
+            </svg>
+          </button>
+
+          <!-- Button 4: Middle-Right -> Gift Box Icon (Opens Birthday Gift) -->
+          <button
+            type="button"
+            data-open-view="view-gift"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-4"
+            aria-label="Birthday Gift"
+            title="Birthday Gift"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 text-[#6D1B3B] transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Isometric 3D Gift Box matching Beranda.jpg -->
+              <!-- Box Bottom Left Face -->
+              <path d="M12 29l20 9v18l-20-10V29z" fill="#FFB3C6" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <!-- Box Bottom Right Face -->
+              <path d="M52 29L32 38v18l20-10V29z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <!-- Box Lid Top Diamond -->
+              <path d="M32 16l22 9-22 10-22-10 22-9z" fill="#FFF3E4" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <!-- Ribbon Vertical Strips -->
+              <path d="M21 20.5l22 9.5v19.5" stroke="#9E2A50" stroke-width="4.5"/>
+              <path d="M43 20.5L21 30v19.5" stroke="#9E2A50" stroke-width="4.5"/>
+              <!-- Ribbon Bow Loops on Top -->
+              <path d="M32 24c-6-8-14-6-13 0 1 5 9 2 13 0z" fill="#D83A6F" stroke="#fff" stroke-width="1.2"/>
+              <path d="M32 24c6-8 14-6 13 0-1 5-9 2-13 0z" fill="#D83A6F" stroke="#fff" stroke-width="1.2"/>
+              <circle cx="32" cy="24" r="2.8" fill="#D83A6F" stroke="#fff" stroke-width="1.2"/>
+            </svg>
+          </button>
+
+          <!-- Button 5: Bottom-Left -> Record Player / Turntable Icon (Opens Our Songs) -->
+          <button
+            type="button"
+            data-open-view="view-songs"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-5"
+            aria-label="Our Songs"
+            title="Our Songs"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 text-[#6D1B3B] transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Suitcase Lid (Open) -->
+              <path d="M15 12h30l-2 20H17L15 12z" fill="#FFF3E4" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <rect x="18" y="15" width="24" height="14" fill="#f8f8f8" stroke="#FFB3C6" stroke-width="1.2"/>
+              <!-- Turntable Base -->
+              <path d="M17 32h28l6 16H11l6-16z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M11 48h40v5a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2v-5z" fill="#E05282" stroke="#8C1D46" stroke-width="2.2"/>
+              <!-- Vinyl Disc -->
+              <ellipse cx="29" cy="40" rx="11" ry="6.5" fill="#8C1D46" stroke="#FFC2D4" stroke-width="1.5"/>
+              <ellipse cx="29" cy="40" rx="3.5" ry="2.2" fill="#ffffff"/>
+              <!-- Tonearm -->
+              <path d="M43 35l-4 7-3 1" stroke="#FFF8EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Button 6: Bottom-Right -> Glossy Black Heart Icon (Opens Reasons I Love You) -->
+          <button
+            type="button"
+            data-open-view="view-reasons"
+            class="menu-nav-btn menu-icon-card group scroll-reveal reveal-scale stagger-6"
+            aria-label="Reasons I Love You"
+            title="Reasons I Love You"
+          >
+            <svg viewBox="0 0 64 64" class="w-16 h-16 sm:w-20 sm:h-20 transition-transform group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="glossyHeart" cx="35%" cy="30%" r="65%">
+                  <stop offset="0%" stop-color="#FFC2D4"/>
+                  <stop offset="45%" stop-color="#FF6B98"/>
+                  <stop offset="100%" stop-color="#C2185B"/>
+                </radialGradient>
+              </defs>
+              <path
+                d="M32 54C32 54 10 39.5 10 22.5C10 14.2 16.5 8.5 23.5 8.5C27.8 8.5 30.8 10.8 32 13.5C33.2 10.8 36.2 8.5 40.5 8.5C47.5 8.5 54 14.2 54 22.5C54 39.5 32 54 32 54Z"
+                fill="url(#glossyHeart)"
+                stroke="#8C1D46"
+                stroke-width="2"
+              />
+              <!-- Glossy Specular Highlights -->
+              <path d="M16 21c0-4.5 3.5-8 7.5-8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+              <path d="M39 14c3 0 5.5 2 6.5 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =====================================================================
+       VIEW 3: BIRTHDAY WISH (Matches Birthday wish.jpg)
+       ===================================================================== -->
+  <section id="view-wish" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-12 flex flex-col items-center justify-between">
+    <div class="w-full flex flex-col items-center space-y-6">
+
+      <!-- Top Cake Illustration + Surrounding Words ("Birthday Wish For You") -->
+      <div class="relative w-full max-w-[360px] h-52 sm:h-56 mx-auto flex items-center justify-center select-none scroll-reveal reveal-scale">
+        <!-- Surrounding Text -->
+        <span class="font-display font-bold text-2xl sm:text-3xl text-[#8C1D46] absolute top-2 left-2 sm:left-4 tracking-tight">
+          Birthday
+        </span>
+        <span class="font-display font-bold text-2xl sm:text-3xl text-[#8C1D46] absolute top-2 right-4 sm:right-8 tracking-tight">
+          Wish
+        </span>
+        <span class="font-display font-bold text-2xl sm:text-3xl text-[#8C1D46] absolute top-24 left-6 sm:left-10 tracking-tight">
+          For
+        </span>
+        <span class="font-display font-bold text-2xl sm:text-3xl text-[#8C1D46] absolute bottom-2 right-6 sm:right-10 tracking-tight">
+          You
+        </span>
+
+        <!-- Interactive Hand-Drawn Line-Art Cake with Candle (Click to blow/relight!) -->
+        <button
+          type="button"
+          id="btnBlowWishCandle"
+          class="group relative flex flex-col items-center justify-center cursor-pointer focus:outline-none pt-3"
+          title="Klik kue/lilin untuk meniup lilin!"
+        >
+          <svg viewBox="0 0 180 180" class="w-40 h-40 sm:w-44 sm:h-44 overflow-visible transition-transform group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Candle Flame (Toggled on click) -->
+            <g id="wishCandleFlame" class="flame-anim">
+              <path d="M90 12 C84 24, 83 34, 90 42 C97 34, 96 24, 90 12 Z" fill="#ff9800" stroke="#9E2A50" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M90 20 C87 27, 87 33, 90 38 C93 33, 93 27, 90 20 Z" fill="#fff59d"/>
+            </g>
+            <!-- Candle Wick -->
+            <line x1="90" y1="42" x2="90" y2="48" stroke="#9E2A50" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Tall Striped Candle -->
+            <rect x="86" y="48" width="8" height="38" rx="2" fill="#ffffff" stroke="#9E2A50" stroke-width="2.8"/>
+            <line x1="86" y1="56" x2="94" y2="60" stroke="#9E2A50" stroke-width="2"/>
+            <line x1="86" y1="66" x2="94" y2="70" stroke="#9E2A50" stroke-width="2"/>
+            <line x1="86" y1="76" x2="94" y2="80" stroke="#9E2A50" stroke-width="2"/>
+
+            <!-- Plate -->
+            <ellipse cx="90" cy="148" rx="64" ry="16" fill="#ffffff" stroke="#9E2A50" stroke-width="3"/>
+            <ellipse cx="90" cy="148" rx="48" ry="11" stroke="#9E2A50" stroke-width="1.8" stroke-dasharray="6 4"/>
+
+            <!-- Cake Body -->
+            <path d="M42 102v38c0 9 21.5 16 48 16s48-7 48-16v-38" fill="#FFF8EE" stroke="#8C1D46" stroke-width="3.2" stroke-linejoin="round"/>
+            <!-- Cake Strawberry Pink & Cream Layers -->
+            <path d="M42 118c0 8.5 21.5 15 48 15s48-6.5 48-15" stroke="#FF8FAB" stroke-width="6"/>
+            <path d="M42 131c0 8.5 21.5 15 48 15s48-6.5 48-15" stroke="#E05282" stroke-width="6"/>
+
+            <!-- Cake Top Surface -->
+            <ellipse cx="90" cy="102" rx="48" ry="15" fill="#ffffff" stroke="#9E2A50" stroke-width="3.2"/>
+
+            <!-- Wavy Icing Drips -->
+            <path d="M42 104c4 10 10 10 14 2 4 9 12 11 16 1 5 10 13 10 18 0 5 10 13 10 18 1 4 8 10 8 14-1 3 6 8 6 16-3" fill="#ffffff" stroke="#9E2A50" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span id="wishCandleHint" class="text-[11px] font-bold text-[#C2185B] -mt-2">
+            (Ketuk lilin untuk tiup / nyalakan)
+          </span>
+        </button>
+      </div>
+
+      <!-- Dark Rounded Card with Verbatim Wish Text -->
+      <div class="bg-gradient-to-br from-[#F078A0] via-[#E5638E] to-[#D64B7A] text-[#FFFDF9] border-4 border-[#FFF8EE] rounded-[34px] p-6 sm:p-8 w-full max-w-[420px] mx-auto shadow-[0_16px_36px_rgba(214,75,122,0.25)] scroll-reveal reveal-scale stagger-2">
+        <div class="font-serif-body text-xs sm:text-[13.5px] leading-[1.68] text-white/95 space-y-1 text-left">
+          <p class="font-semibold flex items-center gap-1.5">
+            <span>Happy Birthday, Sayang!</span>
+            <!-- White Heart Icon SVG -->
+            <svg class="w-4 h-4 text-white fill-current inline-block shrink-0" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </p>
+          <p>
+            Hari ini adalah hari yang sangat spesial,
+            karena hari ini seseorang yang paling berharga
+            di hidupku bertambah usia.
+          </p>
+          <p>
+            Semoga di umur yang baru ini, kamu selalu
+            diberikan kesehatan, kebahagiaan,
+            ketenangan, dan semua hal baik yang selama
+            ini kamu doakan. Semoga setiap langkahmu
+            dipenuhi keberanian, setiap usahamu
+            membawa hasil yang indah, dan setiap harimu
+            selalu dipenuhi alasan untuk tersenyum.
+          </p>
+          <p>
+            Terima kasih karena sudah menjadi rumah,
+            tempat pulang, sekaligus alasan kenapa
+            banyak hariku terasa lebih berarti.
+          </p>
+          <p>
+            Selamat bertambah usia, sayang. Semoga
+            tahun ini menjadi tahun terbaikmu. Dan
+            semoga aku masih diberi kesempatan untuk
+            terus menemani setiap ulang tahunmu
+            berikutnya.
+          </p>
+          <p class="pt-1 font-medium">
+            Happy Birthday, My Favorite Person. I love you
+            endlessly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-2">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VIEW 4: LETTER FOR YOU (Matches Letter for you.jpg)
+       ===================================================================== -->
+  <section id="view-letter" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-14 flex flex-col items-center justify-center">
+    <div class="w-full flex flex-col items-center space-y-8">
+
+      <!-- Title -->
+      <h2 class="font-display font-bold text-4xl sm:text-5xl text-[#7A1C3E] tracking-tight text-center">
+        Letter for you
+      </h2>
+
+      <!-- Dark Rounded Card with Verbatim Centered Letter Text -->
+      <div class="bg-gradient-to-br from-[#F078A0] via-[#E5638E] to-[#D64B7A] text-[#FFFDF9] border-4 border-[#FFF8EE] rounded-[36px] p-6 sm:p-9 w-full max-w-[430px] mx-auto shadow-[0_16px_36px_rgba(214,75,122,0.25)] scroll-reveal reveal-scale stagger-2">
+        <p class="font-serif-body text-xs sm:text-[13.5px] leading-[1.72] text-white/95 text-center">
+          Hai, sayang.<br />
+          Kalau kamu sedang membaca surat ini, berarti
+          kamu sudah membuka salah satu bagian yang
+          paling aku tunggu. Aku cuma ingin bilang terima
+          kasih. Terima kasih sudah hadir di hidupku,
+          sudah bertahan sejauh ini, dan sudah menjadi
+          seseorang yang selalu membuatku merasa
+          dicintai. Aku tahu kita nggak selalu melewati
+          hari-hari yang mudah. Kadang kita berbeda
+          pendapat, kadang sama-sama keras kepala,
+          kadang sama-sama capek. Tapi di balik semua
+          itu, aku tetap memilih kamu. Berkali-kali. Aku
+          nggak tahu masa depan akan seperti apa. Yang
+          aku tahu, selama masih ada kesempatan, aku
+          ingin terus membuat kenangan bersamamu,
+          tertawa bersamamu, dan merayakan banyak hal
+          kecil yang mungkin bagi orang lain biasa saja.<br />
+          Terima kasih sudah menjadi<br />
+          bagian terindah dalam hidupku.
+        </p>
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-1">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VIEW 5: OUR MEMORIES (Matches Our memories.jpg)
+       ===================================================================== -->
+  <section id="view-memories" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-12 flex flex-col items-center justify-between">
+    <div class="w-full flex flex-col items-center space-y-6">
+
+      <!-- Title & Script Subtitle -->
+      <div class="text-center space-y-2">
+        <h2 class="font-display font-bold text-4xl sm:text-5xl text-[#7A1C3E] tracking-tight">
+          Our Memories
+        </h2>
+        <p class="font-script text-2xl sm:text-3xl text-[#C2185B] leading-snug">
+          Here's to all the memories we've made...<br />
+          and all the ones we're yet to create.
+        </p>
+      </div>
+
+      <!-- Two Overlapping Photobooth Strips with Monochrome Daisy Icons -->
+      <div class="relative w-full max-w-[340px] h-[390px] sm:h-[420px] mx-auto flex items-center justify-center my-2 select-none">
+
+        <!-- Right Photobooth Strip (Tilted Clockwise Behind) -->
+        <div class="scroll-reveal reveal-right stagger-2 absolute right-8 sm:right-10 top-6 w-32 sm:w-36 bg-[#FFFDF9] p-2.5 pb-5 shadow-[0_10px_24px_rgba(0,0,0,0.22)] border border-[#FFD6E5] rotate-[9deg] space-y-2.5 z-10 transition-transform duration-300 hover:rotate-[5deg] hover:scale-105">
+          <!-- Frame 1 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/gambar1.jpeg" alt="" class="w-full h-full object-cover">
+          </div>
+          <!-- Frame 2 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/gambar2.jpeg" alt="" class="w-full h-full object-cover">
+          </div>
+          <!-- Frame 3 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/gambar5.jpeg" alt="" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Left Photobooth Strip (Slightly Tilted Counter-Clockwise In Front) -->
+        <div class="scroll-reveal reveal-left stagger-1 absolute left-9 sm:left-12 top-1 w-32 sm:w-36 bg-[#FFFDF9] p-2.5 pb-5 shadow-[0_12px_28px_rgba(0,0,0,0.28)] border border-[#FFD6E5] -rotate-[2deg] space-y-2.5 z-20 transition-transform duration-300 hover:rotate-0 hover:scale-105">
+          <!-- Frame 1 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/gambar4.jpeg" alt="" class="w-full h-full object-cover">
+          </div>
+          <!-- Frame 2 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/gambar6.jpeg" alt="" class="w-full h-full object-cover">
+          </div>
+          <!-- Frame 3 -->
+          <div class="aspect-square w-full overflow-hidden rounded-sm">
+            <img src="img/image.png" alt="" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Monochrome Daisy Flower Icon Top-Left -->
+        <div class="absolute left-1 sm:left-3 top-24 z-30 drop-shadow-md">
+          <svg viewBox="0 0 80 80" class="w-16 h-16 sm:w-20 sm:h-20">
+            <g transform="translate(40,40)">
+              <g fill="#FFD6E5" stroke="#E05282" stroke-width="1.5">
+                <ellipse rx="7" ry="26" transform="rotate(0)"/>
+                <ellipse rx="7" ry="26" transform="rotate(22.5)"/>
+                <ellipse rx="7" ry="26" transform="rotate(45)"/>
+                <ellipse rx="7" ry="26" transform="rotate(67.5)"/>
+                <ellipse rx="7" ry="26" transform="rotate(90)"/>
+                <ellipse rx="7" ry="26" transform="rotate(112.5)"/>
+                <ellipse rx="7" ry="26" transform="rotate(135)"/>
+                <ellipse rx="7" ry="26" transform="rotate(157.5)"/>
+              </g>
+              <circle r="9" fill="#FFF3E4" stroke="#E05282" stroke-width="2"/>
+              <circle r="4" fill="#FF8FAB"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Monochrome Daisy Flower Icon Bottom-Right -->
+        <div class="absolute right-1 sm:right-3 bottom-12 z-30 drop-shadow-md">
+          <svg viewBox="0 0 80 80" class="w-20 h-20 sm:w-24 sm:h-24">
+            <g transform="translate(40,40)">
+              <g fill="#FFD6E5" stroke="#E05282" stroke-width="1.5">
+                <ellipse rx="7.5" ry="28" transform="rotate(0)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(22.5)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(45)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(67.5)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(90)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(112.5)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(135)"/>
+                <ellipse rx="7.5" ry="28" transform="rotate(157.5)"/>
+              </g>
+              <circle r="10" fill="#FFF3E4" stroke="#E05282" stroke-width="2"/>
+              <circle r="6" fill="#FF8FAB"/>
+            </g>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-2">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VIEW 6: BIRTHDAY GIFT (Matches Birthday gift.jpg)
+       ===================================================================== -->
+  <section id="view-gift" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-12 flex flex-col items-center justify-between">
+    <div class="w-full flex flex-col items-center space-y-8">
+
+      <!-- Top Row: Gift Box Icon + Pixel Speech Bubble -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 w-full max-w-lg mx-auto pt-2">
+        <!-- Monochrome Isometric 3D Gift Box SVG -->
+        <div id="insideGiftBoxIcon" role="button" tabindex="0" title="Klik untuk mengunci kembali kado" class="w-28 h-28 sm:w-32 sm:h-32 shrink-0 -rotate-6 drop-shadow-md cursor-pointer hover:scale-105 transition">
+          <svg viewBox="0 0 64 64" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 27l22 10v20L10 46V27z" fill="#FFB3C6" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M54 27L32 37v20l22-11V27z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 14l24 10-24 11L8 24l24-10z" fill="#FFF3E4" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M20 19l24 10.5v20.5" stroke="#9E2A50" stroke-width="5"/>
+            <path d="M44 19L20 29.5v20.5" stroke="#9E2A50" stroke-width="5"/>
+            <path d="M32 23c-7-9-16-7-15 0 1 5 10 2 15 0z" fill="#D83A6F" stroke="#FFF8EE" stroke-width="1.2"/>
+            <path d="M32 23c7-9 16-7 15 0-1 5-10 2-15 0z" fill="#D83A6F" stroke="#FFF8EE" stroke-width="1.2"/>
+            <path d="M30 24l-6 9M34 24l7 8" stroke="#E05282" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="32" cy="23" r="3" fill="#D83A6F" stroke="#FFF8EE" stroke-width="1.2"/>
+          </svg>
+        </div>
+
+        <!-- Pixel Art Speech Bubble -->
+        <div class="pixel-bubble px-5 py-4 max-w-[260px] text-center relative">
+          <p class="font-sans font-extrabold text-xs sm:text-[13px] leading-snug text-[#8C1D46]">
+            Terima kasih ya sudah<br />
+            membuka kotak ini dengan<br />
+            sandi spesial kita.<br />
+            Ada pesan jujur dari<br />
+            lubuk hatiku di bawah ini...
+          </p>
+        </div>
+      </div>
+
+      <!-- White Bordered Card with Ribbon Bow on Top -->
+      <div class="relative bg-[#FFFDF9] border-2 border-[#FFD6E5] p-3.5 sm:p-4 shadow-[0_12px_28px_rgba(224,82,130,0.16)] rounded-3xl w-full max-w-[430px] mx-auto scroll-reveal reveal-scale stagger-2">
+        <!-- Ribbon Bow SVG at Top Center -->
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 z-20">
+          <svg viewBox="0 0 64 54" class="w-12 h-11 drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 18C22 6 8 10 10 20c2 8 14 4 22-2z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2"/>
+            <path d="M32 18c10-12 24-8 22 2-2 8-14 4-22-2z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2"/>
+            <path d="M29 20l-6 26 6-4 2-22" fill="#E05282" stroke="#8C1D46" stroke-width="1.5"/>
+            <path d="M35 20l6 26-6-4-2-22" fill="#E05282" stroke="#8C1D46" stroke-width="1.5"/>
+            <circle cx="32" cy="18" r="4.5" fill="#D83A6F" stroke="#FFF8EE" stroke-width="1.5"/>
+          </svg>
+        </div>
+
+        <!-- Inner Thin Black Frame -->
+        <div class="border-[2.5px] border-[#F48FB1] bg-[#FFFDF9] px-5 py-8 sm:px-8 sm:py-10 text-center">
+          <p class="font-serif-body font-bold text-sm sm:text-[15px] leading-[1.75] text-[#6D1B3B]">
+            Maaf ya sayang, aku belum bisa beri hadiah<br />
+            untukmu sekarang... Tapi aku janji bakal<br />
+            memberi hadiahnya buat kamu, cuma bukan<br />
+            saat ini yahh.<br /><br />
+            Untuk hari ini, baru doa paling tulus, pelukan,<br />
+            dan seluruh rasa sayangku yang bisa aku kasih.<br />
+            Terima kasih karena kamu nggak pernah menuntut<br />
+            lebih, selalu sabar mengerti keadaanku, dan<br />
+            tetap memilih bertahan di sampingku.<br /><br />
+            Tungguin aku ya sayang, aku pasti wujudkan<br />
+            hadiah itu buat kamu nanti. Selamat ulang tahun,<br />
+            manusia paling berharga di hidupku. 🤍💗
+          </p>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-2">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VIEW 7: OUR SONGS (Matches Our songs.jpg)
+       ===================================================================== -->
+  <section id="view-songs" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-12 flex flex-col items-center justify-between">
+    <div class="w-full flex flex-col items-center space-y-6">
+
+      <!-- Title -->
+      <h2 class="font-display font-bold text-4xl sm:text-5xl text-[#7A1C3E] tracking-tight text-center">
+        Our Songs
+      </h2>
+
+      <!-- 3 Song Cards Stack -->
+      <div class="w-full max-w-[440px] mx-auto space-y-4">
+
+        <!-- Song 1: Abadi - Perunggu -->
+        <div class="song-card p-3.5 sm:p-4 flex items-center gap-4 text-white scroll-reveal reveal-left stagger-1" data-song-idx="0">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-[20px] overflow-hidden shrink-0 border border-white/15 relative">
+            <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="url(#skyG1)"/>
+              <path d="M35 34c0-5 4-9 9-9 4 0 7.5 2.5 8.5 6 3.5 0 6.5 3 6.5 6.5S56 44 52.5 44h-17C31.5 44 28 40.5 28 36.5S31 34 35 34z" fill="#ffffff"/>
+              <path d="M0 68 Q30 56 65 70 T100 66 L100 100 L0 100 Z" fill="#F8BBD0"/>
+              <path d="M0 78 Q45 64 100 80 L100 100 L0 100 Z" fill="#F06292"/>
+            </svg>
+          </div>
+          <div class="flex-1 text-left font-serif-body pr-1">
+            <h3 class="font-bold text-sm sm:text-base text-white mb-1">
+              Abadi - Perunggu
+            </h3>
+            <p class="text-[11px] sm:text-xs leading-relaxed text-white/90">
+              Lagu ini mengingatkanku pada
+              harapan sederhana. Semoga apa
+              pun yang kita jalani sekarang bisa
+              bertahan lama, bahkan kalau
+              bisa... selamanya.
+            </p>
+          </div>
+        </div>
+
+        <!-- Song 2: You! - LANY -->
+        <div class="song-card p-3.5 sm:p-4 flex items-center gap-4 text-white scroll-reveal reveal-right stagger-2" data-song-idx="1">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-[20px] overflow-hidden shrink-0 border border-white/15 relative">
+            <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="url(#skyG1)"/>
+              <path d="M35 34c0-5 4-9 9-9 4 0 7.5 2.5 8.5 6 3.5 0 6.5 3 6.5 6.5S56 44 52.5 44h-17C31.5 44 28 40.5 28 36.5S31 34 35 34z" fill="#ffffff"/>
+              <path d="M0 68 Q30 56 65 70 T100 66 L100 100 L0 100 Z" fill="#F8BBD0"/>
+              <path d="M0 78 Q45 64 100 80 L100 100 L0 100 Z" fill="#F06292"/>
+            </svg>
+          </div>
+          <div class="flex-1 text-left font-serif-body pr-1">
+            <h3 class="font-bold text-sm sm:text-base text-white mb-1">
+              You! - LANY
+            </h3>
+            <p class="text-[11px] sm:text-xs leading-relaxed text-white/90">
+              Lagu ini sederhana, tapi setiap kali
+              mendengarnya aku selalu
+              kepikiran kamu. Karena buatku,
+              dari banyaknya orang di dunia ini,
+              aku tetap akan memilih kamu.
+              <svg class="w-3.5 h-3.5 text-red-500 fill-current inline-block ml-0.5 -mt-0.5" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </p>
+          </div>
+        </div>
+
+        <!-- Song 3: Anything - Adrianne Lenker -->
+        <div class="song-card p-3.5 sm:p-4 flex items-center gap-4 text-white scroll-reveal reveal-left stagger-3" data-song-idx="2">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-[20px] overflow-hidden shrink-0 border border-white/15 relative">
+            <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="url(#skyG1)"/>
+              <path d="M35 34c0-5 4-9 9-9 4 0 7.5 2.5 8.5 6 3.5 0 6.5 3 6.5 6.5S56 44 52.5 44h-17C31.5 44 28 40.5 28 36.5S31 34 35 34z" fill="#ffffff"/>
+              <path d="M0 68 Q30 56 65 70 T100 66 L100 100 L0 100 Z" fill="#F8BBD0"/>
+              <path d="M0 78 Q45 64 100 80 L100 100 L0 100 Z" fill="#F06292"/>
+            </svg>
+          </div>
+          <div class="flex-1 text-left font-serif-body pr-1">
+            <h3 class="font-bold text-sm sm:text-base text-white mb-1">
+              Anything - Adrianne Lenker
+            </h3>
+            <p class="text-[11px] sm:text-xs leading-relaxed text-white/90">
+              Lagu ini selalu mengingatkanku pada
+              kamu. Vibes-nya yang tenang dan
+              hangat membuatku merasa seolah
+              setiap momen sederhana bersamamu
+              adalah sesuatu yang sangat berharga.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-2">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       VIEW 8: REASONS I LOVE YOU (Matches Reason I love you.jpg)
+       ===================================================================== -->
+  <section id="view-reasons" class="view-page hidden min-h-screen w-full max-w-2xl mx-auto px-4 py-10 sm:py-12 flex flex-col items-center justify-between">
+    <div class="w-full flex flex-col items-center space-y-6">
+
+      <!-- Title -->
+      <h2 class="font-display font-bold text-4xl sm:text-5xl text-[#7A1C3E] tracking-tight text-center">
+        Reasons I Love You
+      </h2>
+
+      <!-- White Rounded Pill Card with Hand-Drawn Wavy Border & Bow -->
+      <div class="bg-[#FFFDF9] border-4 border-[#FFD6E5] rounded-[56px] p-5 sm:p-7 w-full max-w-[380px] sm:max-w-[400px] mx-auto shadow-[0_14px_32px_rgba(224,82,130,0.16)] relative scroll-reveal reveal-scale stagger-1">
+        <div class="relative px-5 py-8 sm:px-7 sm:py-9">
+          <!-- Hand-Drawn Wavy Border + Top Ribbon Bow SVG Overlay -->
+          <svg viewBox="0 0 340 460" class=" inset-0 w-full h-full pointer-events-none" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <!-- Wavy Hand-Drawn Frame Path -->
+            <path
+              d="M 140 28
+                 C 95 24, 55 28, 35 44
+                 C 15 62, 16 95, 22 135
+                 C 28 175, 16 215, 22 255
+                 C 28 295, 14 345, 22 385
+                 C 30 422, 55 438, 95 436
+                 C 135 434, 155 442, 185 436
+                 C 220 430, 265 440, 298 428
+                 C 324 416, 324 375, 318 335
+                 C 312 295, 326 250, 318 210
+                 C 310 170, 326 120, 318 80
+                 C 310 42, 285 28, 240 28
+                 C 215 28, 195 28, 170 28 Z"
+              stroke="#E05282"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <!-- Ribbon Bow at Top Center -->
+            <path d="M170 28 C152 10, 128 16, 134 28 C140 38, 158 32, 170 28 Z" stroke="#E05282" stroke-width="3.5" fill="#FFD6E5"/>
+            <path d="M170 28 C188 10, 212 16, 206 28 C200 38, 182 32, 170 28 Z" stroke="#E05282" stroke-width="3.5" fill="#FFD6E5"/>
+            <path d="M166 30 C154 38, 142 46, 136 56" stroke="#E05282" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M174 30 C186 38, 198 46, 204 56" stroke="#E05282" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="170" cy="28" r="4.5" fill="#C2185B"/>
+          </svg>
+
+          <!-- 10 Reasons Text Content -->
+          <div class="relative z-10 font-serif-body text-[11.5px] sm:text-[12.5px] leading-[1.52] text-[#6D1B3B] text-left pt-6 pb-2 px-2">
+            <p class="font-semibold mb-1.5 text-center sm:text-left">
+              10 alasan kenapa aku sayang sama kamu.
+            </p>
+            <ol class="list-decimal pl-5 space-y-1 font-medium">
+              <li>Karena kamu selalu berhasil bikin hariku lebih baik.</li>
+              <li>Karena senyummu bisa bikin capekku hilang.</li>
+              <li>Karena kamu selalu berusaha, meskipun keadaan nggak mudah.</li>
+              <li>Karena kamu membuatku merasa aman.</li>
+              <li>Karena kamu menerima aku apa adanya.</li>
+              <li>Karena kamu selalu jadi orang pertama yang ingin aku ceritain semuanya.</li>
+              <li>Karena kamu mengajarkanku arti sabar dan bertumbuh bersama.</li>
+              <li>Karena bersamamu, hal-hal sederhana terasa istimewa.</li>
+              <li>Karena kamu adalah rumah yang selalu ingin aku tuju.</li>
+              <li>Dan alasan terakhir... karena kamu adalah kamu. Itu saja sudah lebih dari cukup.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="pt-1">
+        <button type="button" data-back-beranda class="btn-black-pill">
+          Back
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <!-- =====================================================================
+       MODAL SANDI KADO (PASSCODE: 1610)
+       ===================================================================== -->
+  <div
+    id="giftPinModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-[#6D1B3B]/45 backdrop-blur-sm"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="giftPinModalTitle"
+  >
+    <div
+      id="giftPinCard"
+      class="bg-gradient-to-b from-[#FFFDF9] via-[#FFF6F9] to-[#FDF2E4] border-4 border-[#FFF8EE] ring-4 ring-[#FFB3C6] rounded-[38px] p-6 sm:p-7 w-full max-w-[360px] shadow-[0_20px_45px_rgba(140,29,70,0.32)] text-center relative space-y-5 view-page"
+    >
+      <!-- Close Button -->
+      <button
+        type="button"
+        id="btnClosePinModal"
+        aria-label="Tutup Modal Sandi"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#FFF0F5] border-2 border-[#FFADC6] text-[#8C1D46] font-bold hover:bg-[#FFD6E5] transition flex items-center justify-center cursor-pointer"
+      >
+        ✕
+      </button>
+
+      <!-- Cute Gift Lock Icon -->
+      <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-[#FFD6E5] to-[#FFF3E4] border-3 border-[#FF8FAB] shadow-md flex items-center justify-center">
+        <svg viewBox="0 0 64 64" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 29l20 9v18l-20-10V29z" fill="#FFB3C6" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M52 29L32 38v18l20-10V29z" fill="#FF8FAB" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M32 16l22 9-22 10-22-10 22-9z" fill="#FFF3E4" stroke="#8C1D46" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M21 20.5l22 9.5v19.5" stroke="#9E2A50" stroke-width="4.5"/>
+          <path d="M43 20.5L21 30v19.5" stroke="#9E2A50" stroke-width="4.5"/>
+          <circle cx="32" cy="24" r="3" fill="#D83A6F" stroke="#fff" stroke-width="1.2"/>
+        </svg>
+      </div>
+
+      <div class="space-y-1">
+        <h3 id="giftPinModalTitle" class="font-display font-bold text-2xl text-[#7A1C3E]">
+          Kado Spesial Terkunci 🔒
+        </h3>
+        <p class="text-xs sm:text-sm font-medium text-[#9E2A50]">
+          Masukkan 4 digit sandi spesial untuk membuka kotak hadiahmu!
+        </p>
+      </div>
+
+      <!-- 4-Digit Visual PIN Display Boxes -->
+      <div id="pinDotsContainer" class="flex items-center justify-center gap-3 py-1">
+        <div class="pin-dot" data-pin-slot="0"></div>
+        <div class="pin-dot" data-pin-slot="1"></div>
+        <div class="pin-dot" data-pin-slot="2"></div>
+        <div class="pin-dot" data-pin-slot="3"></div>
+      </div>
+
+      <!-- Error / Feedback Message -->
+      <p id="pinFeedbackMsg" class="text-xs font-bold min-h-[18px] text-[#C2185B]">
+        Petunjuk: Tanggal &amp; bulan spesial 💗
+      </p>
+
+      <!-- Numeric Keypad Grid -->
+      <div class="grid grid-cols-3 gap-2.5 pt-1">
+        <button type="button" class="pin-key" data-pin-digit="1">1</button>
+        <button type="button" class="pin-key" data-pin-digit="2">2</button>
+        <button type="button" class="pin-key" data-pin-digit="3">3</button>
+        <button type="button" class="pin-key" data-pin-digit="4">4</button>
+        <button type="button" class="pin-key" data-pin-digit="5">5</button>
+        <button type="button" class="pin-key" data-pin-digit="6">6</button>
+        <button type="button" class="pin-key" data-pin-digit="7">7</button>
+        <button type="button" class="pin-key" data-pin-digit="8">8</button>
+        <button type="button" class="pin-key" data-pin-digit="9">9</button>
+        <button type="button" id="btnPinClear" class="pin-key text-xs font-bold bg-[#FFF0F5] text-[#C2185B]">Hapus</button>
+        <button type="button" class="pin-key" data-pin-digit="0">0</button>
+        <button type="button" id="btnPinSubmit" class="pin-key text-xs font-bold !bg-gradient-to-r from-[#FF8FAB] to-[#E05282] !text-white !border-[#FFF8EE]">Buka 🎁</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: NAVIGATION, INTERACTIVE CANDLE & HAPPY BIRTHDAY MUSIC BOX
+       ===================================================================== -->
+  <script>
+    (function () {
+      // --- View Navigation State ---
+      const views = [
+        'view-cover',
+        'view-beranda',
+        'view-wish',
+        'view-letter',
+        'view-memories',
+        'view-gift',
+        'view-songs',
+        'view-reasons'
+      ];
+
+      function showView(targetId, scrollToChooser) {
+        views.forEach(function (id) {
+          const el = document.getElementById(id);
+          if (!el) return;
+          if (id === targetId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        });
+
+        if (scrollToChooser && targetId === 'view-beranda') {
+          const chooser = document.getElementById('menuChooserSection');
+          if (chooser) {
+            chooser.scrollIntoView({ behavior: 'smooth' });
+            return;
+          }
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(observeScrollElements, 60);
+      }
+
+      // --- Happy Birthday Web Audio API Music Box Synthesizer ---
+      let audioCtx = null;
+      let isPlayingMusic = false;
+      let noteTimer = null;
+      let noteIndex = 0;
+
+      // "Happy Birthday to You" Melody + Chords (Warm Music Box / Kalimba style)
+      // Frequencies in Hz (F Major: C4=261.63, D4=293.66, E4=329.63, F4=349.23, G4=392.00, A4=440.00, Bb4=466.16, C5=523.25)
+      const happyBirthdaySequence = [
+        // Phrase 1: Hap-py birth-day to you
+        { m: 261.63, c: 174.61, d: 340 },
+        { m: 261.63, c: null,   d: 220 },
+        { m: 293.66, c: 174.61, d: 520 },
+        { m: 261.63, c: 220.00, d: 520 },
+        { m: 349.23, c: 174.61, d: 520 },
+        { m: 329.63, c: 196.00, d: 950 },
+
+        // Phrase 2: Hap-py birth-day to you
+        { m: 261.63, c: 196.00, d: 340 },
+        { m: 261.63, c: null,   d: 220 },
+        { m: 293.66, c: 196.00, d: 520 },
+        { m: 261.63, c: 246.94, d: 520 },
+        { m: 392.00, c: 196.00, d: 520 },
+        { m: 349.23, c: 174.61, d: 950 },
+
+        // Phrase 3: Hap-py birth-day dear Sa-yang
+        { m: 261.63, c: 174.61, d: 340 },
+        { m: 261.63, c: null,   d: 220 },
+        { m: 523.25, c: 220.00, d: 520 },
+        { m: 440.00, c: 261.63, d: 520 },
+        { m: 349.23, c: 174.61, d: 520 },
+        { m: 329.63, c: 196.00, d: 520 },
+        { m: 293.66, c: 233.08, d: 820 },
+
+        // Phrase 4: Hap-py birth-day to you
+        { m: 466.16, c: 233.08, d: 340 },
+        { m: 466.16, c: null,   d: 220 },
+        { m: 440.00, c: 174.61, d: 520 },
+        { m: 349.23, c: 220.00, d: 520 },
+        { m: 392.00, c: 196.00, d: 520 },
+        { m: 349.23, c: 174.61, d: 1150 }
+      ];
+
+      function initAudio() {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+          }
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+      }
+
+      function playMusicBoxTone(freq, durationMs, volume) {
+        if (!audioCtx || !freq) return;
+        const now = audioCtx.currentTime;
+        const dur = durationMs / 1000;
+
+        // Main sine wave + delicate chime overtone
+        const osc1 = audioCtx.createOscillator();
+        const osc2 = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(freq, now);
+
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(freq * 2, now);
+
+        const g2 = audioCtx.createGain();
+        g2.gain.setValueAtTime(0.12, now);
+
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.linearRampToValueAtTime(volume, now + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0008, now + dur * 1.35);
+
+        osc1.connect(gain);
+        osc2.connect(g2);
+        g2.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + dur * 1.4);
+        osc2.stop(now + dur * 1.4);
+      }
+
+      function scheduleNextNote() {
+        if (!isPlayingMusic) return;
+        const step = happyBirthdaySequence[noteIndex];
+        playMusicBoxTone(step.m, step.d, 0.16);
+        if (step.c) {
+          playMusicBoxTone(step.c, step.d * 1.4, 0.07);
+        }
+        noteIndex = (noteIndex + 1) % happyBirthdaySequence.length;
+        noteTimer = setTimeout(scheduleNextNote, step.d);
+      }
+
+      function updateMusicUI() {
+        const label = document.getElementById('musicStatusLabel');
+        if (label) {
+          label.textContent = isPlayingMusic ? 'Music: ON' : 'Play Happy Birthday';
+        }
+      }
+
+      function startMusic() {
+        initAudio();
+        if (isPlayingMusic) return;
+        isPlayingMusic = true;
+        updateMusicUI();
+        if (noteTimer) clearTimeout(noteTimer);
+        scheduleNextNote();
+      }
+
+      function toggleMusic() {
+        initAudio();
+        if (isPlayingMusic) {
+          isPlayingMusic = false;
+          if (noteTimer) {
+            clearTimeout(noteTimer);
+            noteTimer = null;
+          }
+          updateMusicUI();
+        } else {
+          startMusic();
+        }
+      }
+
+      // --- Event Listeners ---
+      const btnMusicToggle = document.getElementById('btnMusicToggle');
+      if (btnMusicToggle) {
+        btnMusicToggle.addEventListener('click', toggleMusic);
+      }
+
+      // Cover Open Button & Envelope
+      const btnOpenCover = document.getElementById('btnOpenCover');
+      const coverEnvelopeClick = document.getElementById('coverEnvelopeClick');
+
+      function handleOpenCover() {
+        startMusic();
+        showView('view-beranda', false);
+      }
+
+      if (btnOpenCover) {
+        btnOpenCover.addEventListener('click', handleOpenCover);
+      }
+      if (coverEnvelopeClick) {
+        coverEnvelopeClick.addEventListener('click', handleOpenCover);
+        coverEnvelopeClick.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleOpenCover();
+          }
+        });
+      }
+
+      // --- Gift Box Passcode (1610) Modal Logic ---
+      const GIFT_PASSCODE = '1610';
+      let currentPinInput = '';
+      const giftPinModal = document.getElementById('giftPinModal');
+      const giftPinCard = document.getElementById('giftPinCard');
+      const pinFeedbackMsg = document.getElementById('pinFeedbackMsg');
+      const pinSlots = document.querySelectorAll('[data-pin-slot]');
+
+      function renderPinSlots() {
+        pinSlots.forEach(function (slot, idx) {
+          if (idx < currentPinInput.length) {
+            slot.textContent = currentPinInput[idx];
+            slot.classList.add('filled');
+          } else {
+            slot.textContent = '';
+            slot.classList.remove('filled');
+          }
+        });
+      }
+
+      function openGiftPinModal() {
+        currentPinInput = '';
+        renderPinSlots();
+        if (pinFeedbackMsg) {
+          pinFeedbackMsg.textContent = 'Petunjuk: Tanggal & bulan spesial 💗';
+          pinFeedbackMsg.className = 'text-xs font-bold min-h-[18px] text-[#C2185B]';
+        }
+        if (giftPinModal) {
+          giftPinModal.classList.remove('hidden');
+          giftPinModal.classList.add('flex');
+        }
+      }
+
+      function closeGiftPinModal() {
+        if (giftPinModal) {
+          giftPinModal.classList.add('hidden');
+          giftPinModal.classList.remove('flex');
+        }
+        currentPinInput = '';
+        renderPinSlots();
+      }
+
+      function verifyGiftPin() {
+        if (currentPinInput === GIFT_PASSCODE) {
+          initAudio();
+          playMusicBoxTone(523.25, 180, 0.18);
+          setTimeout(function () { playMusicBoxTone(659.25, 200, 0.18); }, 120);
+          setTimeout(function () { playMusicBoxTone(783.99, 320, 0.2); }, 240);
+          if (pinFeedbackMsg) {
+            pinFeedbackMsg.textContent = 'Sandi benar! Membuka kado spesialmu... 🎁✨';
+            pinFeedbackMsg.className = 'text-xs font-bold min-h-[18px] text-[#8C1D46]';
+          }
+          setTimeout(function () {
+            closeGiftPinModal();
+            if (!isPlayingMusic) startMusic();
+            showView('view-gift', false);
+          }, 320);
+        } else {
+          initAudio();
+          playMusicBoxTone(196.00, 220, 0.15);
+          if (pinFeedbackMsg) {
+            pinFeedbackMsg.textContent = 'Ups! Sandi salah, coba lagi ya sayang 💗';
+            pinFeedbackMsg.className = 'text-xs font-bold min-h-[18px] text-[#D83A6F]';
+          }
+          if (giftPinCard) {
+            giftPinCard.classList.remove('pin-shake');
+            void giftPinCard.offsetWidth;
+            giftPinCard.classList.add('pin-shake');
+          }
+          setTimeout(function () {
+            currentPinInput = '';
+            renderPinSlots();
+          }, 420);
+        }
+      }
+
+      function appendPinDigit(digit) {
+        if (currentPinInput.length >= 4) return;
+        initAudio();
+        playMusicBoxTone(440 + currentPinInput.length * 60, 120, 0.12);
+        currentPinInput += String(digit);
+        renderPinSlots();
+        if (currentPinInput.length === 4) {
+          setTimeout(verifyGiftPin, 140);
+        }
+      }
+
+      document.querySelectorAll('[data-pin-digit]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const d = btn.getAttribute('data-pin-digit');
+          if (d !== null) appendPinDigit(d);
+        });
+      });
+
+      const btnPinClear = document.getElementById('btnPinClear');
+      if (btnPinClear) {
+        btnPinClear.addEventListener('click', function () {
+          currentPinInput = currentPinInput.slice(0, -1);
+          renderPinSlots();
+        });
+      }
+
+      const btnPinSubmit = document.getElementById('btnPinSubmit');
+      if (btnPinSubmit) {
+        btnPinSubmit.addEventListener('click', verifyGiftPin);
+      }
+
+      const btnClosePinModal = document.getElementById('btnClosePinModal');
+      if (btnClosePinModal) {
+        btnClosePinModal.addEventListener('click', closeGiftPinModal);
+      }
+
+      if (giftPinModal) {
+        giftPinModal.addEventListener('click', function (e) {
+          if (e.target === giftPinModal) closeGiftPinModal();
+        });
+      }
+
+      // Support keyboard typing when PIN modal is open
+      window.addEventListener('keydown', function (e) {
+        if (!giftPinModal || giftPinModal.classList.contains('hidden')) return;
+        if (e.key >= '0' && e.key <= '9') {
+          appendPinDigit(e.key);
+        } else if (e.key === 'Backspace') {
+          currentPinInput = currentPinInput.slice(0, -1);
+          renderPinSlots();
+        } else if (e.key === 'Enter') {
+          verifyGiftPin();
+        } else if (e.key === 'Escape') {
+          closeGiftPinModal();
+        }
+      });
+
+      const insideGiftBoxIcon = document.getElementById('insideGiftBoxIcon');
+      if (insideGiftBoxIcon) {
+        insideGiftBoxIcon.addEventListener('click', function () {
+          showView('view-beranda', true);
+          openGiftPinModal();
+        });
+      }
+
+      // 6 Menu Buttons on Beranda (Gift requires PIN 1610)
+      document.querySelectorAll('.menu-nav-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetView = btn.getAttribute('data-open-view');
+          if (!targetView) return;
+          if (targetView === 'view-gift') {
+            openGiftPinModal();
+            return;
+          }
+          if (!isPlayingMusic) startMusic();
+          showView(targetView, false);
+        });
+      });
+
+      // Back Buttons on Sub-pages
+      document.querySelectorAll('[data-back-beranda]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showView('view-beranda', true);
+        });
+      });
+
+      // Interactive Candle on Birthday Wish Page
+      let candleLit = true;
+      const btnBlowWishCandle = document.getElementById('btnBlowWishCandle');
+      const wishCandleFlame = document.getElementById('wishCandleFlame');
+      const wishCandleHint = document.getElementById('wishCandleHint');
+
+      if (btnBlowWishCandle && wishCandleFlame) {
+        btnBlowWishCandle.addEventListener('click', function () {
+          candleLit = !candleLit;
+          if (candleLit) {
+            wishCandleFlame.style.display = 'block';
+            if (wishCandleHint) {
+              wishCandleHint.textContent = '(Ketuk lilin untuk tiup / nyalakan)';
+            }
+          } else {
+            wishCandleFlame.style.display = 'none';
+            if (wishCandleHint) {
+              wishCandleHint.textContent = 'Yeay! Lilin sudah ditiup. Make a wish!';
+            }
+          }
+        });
+      }
+
+      // Song Cards Interactive Highlight & Music Trigger
+      const songCards = document.querySelectorAll('.song-card');
+      songCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          songCards.forEach(function (c) {
+            c.classList.remove('playing');
+          });
+          card.classList.add('playing');
+          if (!isPlayingMusic) {
+            startMusic();
+          }
+        });
+      });
+
+      // --- Scroll Reveal Animation Observer & Scroll Progress ---
+      const revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            } else {
+              // Re-animate smoothly when scrolling back up/down
+              entry.target.classList.remove('is-visible');
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -20px 0px' }
+      );
+
+      function observeScrollElements() {
+        document.querySelectorAll('.scroll-reveal, h2, .pixel-bubble').forEach(function (el) {
+          if (!el.classList.contains('scroll-reveal')) {
+            el.classList.add('scroll-reveal');
+          }
+          revealObserver.observe(el);
+        });
+      }
+
+      function updateScrollProgress() {
+        const bar = document.getElementById('scrollProgressBar');
+        if (!bar) return;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const pct = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+        bar.style.width = pct + '%';
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+      // --- Ambient Pink, White & Cream Floating Hearts & Petals on Scroll ---
+      const bgCanvas = document.getElementById('pinkCreamCanvas');
+      const bgCtx = bgCanvas ? bgCanvas.getContext('2d') : null;
+      let petals = [];
+      let lastScrollY = window.scrollY || 0;
+
+      function initPetals() {
+        if (!bgCanvas) return;
+        bgCanvas.width = window.innerWidth;
+        bgCanvas.height = window.innerHeight;
+        petals = [];
+        const colors = ['#FFD6E5', '#FF8FAB', '#FFFDF9', '#FFF3E0', '#F48FB1'];
+        for (let i = 0; i < 24; i++) {
+          petals.push({
+            x: Math.random() * bgCanvas.width,
+            y: Math.random() * bgCanvas.height,
+            r: 4 + Math.random() * 6,
+            vy: 0.35 + Math.random() * 0.65,
+            vx: (Math.random() - 0.5) * 0.5,
+            angle: Math.random() * Math.PI * 2,
+            spin: (Math.random() - 0.5) * 0.02,
+            color: colors[i % colors.length]
+          });
+        }
+      }
+
+      function animatePetals() {
+        if (!bgCtx || !bgCanvas) return;
+        bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+        const currentScrollY = window.scrollY || 0;
+        const scrollDelta = (currentScrollY - lastScrollY) * 0.15;
+        lastScrollY = currentScrollY;
+
+        for (let i = 0; i < petals.length; i++) {
+          const p = petals[i];
+          p.y += p.vy - scrollDelta;
+          p.x += p.vx + Math.sin(p.angle) * 0.3;
+          p.angle += p.spin;
+
+          if (p.y > bgCanvas.height + 20) p.y = -15;
+          if (p.y < -20) p.y = bgCanvas.height + 15;
+          if (p.x > bgCanvas.width + 20) p.x = -15;
+          if (p.x < -20) p.x = bgCanvas.width + 15;
+
+          bgCtx.save();
+          bgCtx.translate(p.x, p.y);
+          bgCtx.rotate(p.angle);
+          bgCtx.fillStyle = p.color;
+          bgCtx.globalAlpha = 0.65;
+          bgCtx.beginPath();
+          // Draw soft heart/petal shape
+          bgCtx.moveTo(0, p.r * 0.4);
+          bgCtx.bezierCurveTo(-p.r, -p.r * 0.4, -p.r * 0.5, -p.r * 1.1, 0, -p.r * 0.3);
+          bgCtx.bezierCurveTo(p.r * 0.5, -p.r * 1.1, p.r, -p.r * 0.4, 0, p.r * 0.4);
+          bgCtx.fill();
+          bgCtx.restore();
+        }
+        requestAnimationFrame(animatePetals);
+      }
+
+      window.addEventListener('resize', initPetals);
+      initPetals();
+      animatePetals();
+      observeScrollElements();
+      updateScrollProgress();
+
+    })();
+  </script>
+</body>
+</html>
