@@ -209,6 +209,7 @@
     .song-card.playing {
       outline: 3.5px solid #C2185B;
       box-shadow: 0 14px 30px rgba(194, 24, 91, 0.35);
+      background: linear-gradient(135deg, #F07CA5 0%, #C2185B 100%);
     }
 
     /* ==================== SCROLL REVEAL ANIMATIONS ==================== */
@@ -951,7 +952,7 @@
                 <ellipse rx="7.5" ry="28" transform="rotate(157.5)"/>
               </g>
               <circle r="10" fill="#FFF3E4" stroke="#E05282" stroke-width="2"/>
-              <circle r="6" fill="#FF8FAB"/>
+              <circle r="4.5" fill="#FF8FAB"/>
             </g>
           </svg>
         </div>
@@ -1344,7 +1345,6 @@
       let noteIndex = 0;
 
       // "Happy Birthday to You" Melody + Chords (Warm Music Box / Kalimba style)
-      // Frequencies in Hz (F Major: C4=261.63, D4=293.66, E4=329.63, F4=349.23, G4=392.00, A4=440.00, Bb4=466.16, C5=523.25)
       const happyBirthdaySequence = [
         // Phrase 1: Hap-py birth-day to you
         { m: 261.63, c: 174.61, d: 340 },
@@ -1397,7 +1397,6 @@
         const now = audioCtx.currentTime;
         const dur = durationMs / 1000;
 
-        // Main sine wave + delicate chime overtone
         const osc1 = audioCtx.createOscillator();
         const osc2 = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
@@ -1613,7 +1612,6 @@
         });
       }
 
-      // Support keyboard typing when PIN modal is open
       window.addEventListener('keydown', function (e) {
         if (!giftPinModal || giftPinModal.classList.contains('hidden')) return;
         if (e.key >= '0' && e.key <= '9') {
@@ -1636,7 +1634,7 @@
         });
       }
 
-      // 6 Menu Buttons on Beranda (Gift requires PIN 1610)
+      // 6 Menu Buttons on Beranda
       document.querySelectorAll('.menu-nav-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
           const targetView = btn.getAttribute('data-open-view');
@@ -1680,7 +1678,7 @@
         });
       }
 
-      // Song Cards Interactive Highlight & Music Trigger
+      // --- Our Songs Cards Interactive Click & Music Trigger ---
       const songCards = document.querySelectorAll('.song-card');
       songCards.forEach(function (card) {
         card.addEventListener('click', function () {
@@ -1688,8 +1686,12 @@
             c.classList.remove('playing');
           });
           card.classList.add('playing');
+          // Reset melody to start and ensure default music plays
+          noteIndex = 0;
           if (!isPlayingMusic) {
             startMusic();
+          } else {
+            playMusicBoxTone(523.25, 220, 0.16);
           }
         });
       });
@@ -1701,7 +1703,6 @@
             if (entry.isIntersecting) {
               entry.target.classList.add('is-visible');
             } else {
-              // Re-animate smoothly when scrolling back up/down
               entry.target.classList.remove('is-visible');
             }
           });
@@ -1729,7 +1730,7 @@
 
       window.addEventListener('scroll', updateScrollProgress, { passive: true });
 
-      // --- Ambient Pink, White & Cream Floating Hearts & Petals on Scroll ---
+      // --- Ambient Pink, White & Cream Floating Petals on Scroll ---
       const bgCanvas = document.getElementById('pinkCreamCanvas');
       const bgCtx = bgCanvas ? bgCanvas.getContext('2d') : null;
       let petals = [];
@@ -1779,7 +1780,6 @@
           bgCtx.fillStyle = p.color;
           bgCtx.globalAlpha = 0.65;
           bgCtx.beginPath();
-          // Draw soft heart/petal shape
           bgCtx.moveTo(0, p.r * 0.4);
           bgCtx.bezierCurveTo(-p.r, -p.r * 0.4, -p.r * 0.5, -p.r * 1.1, 0, -p.r * 0.3);
           bgCtx.bezierCurveTo(p.r * 0.5, -p.r * 1.1, p.r, -p.r * 0.4, 0, p.r * 0.4);
