@@ -418,11 +418,12 @@
         </div>
       </div>
 
-      <!-- Open Button -->
-      <div>
+      <!-- Open Button & Countdown Timer Notification -->
+      <div class="flex flex-col items-center space-y-2">
         <button type="button" id="btnOpenCover" class="btn-black-pill">
           Open
         </button>
+        <p id="unlockCountdown" class="text-xs font-bold text-[#8C1D46] min-h-[18px]"></p>
       </div>
 
     </div>
@@ -1300,10 +1301,13 @@
   </div>
 
   <!-- =====================================================================
-       JAVASCRIPT: NAVIGATION, INTERACTIVE CANDLE & HAPPY BIRTHDAY MUSIC BOX
+       JAVASCRIPT: NAVIGATION, TIME LOCK, INTERACTIVE CANDLE & MUSIC BOX
        ===================================================================== -->
   <script>
     (function () {
+      // --- Target Unlock Time: 16 Oktober 2026 pukul 13:00:00 ---
+      const TARGET_UNLOCK_TIME = new Date('2026-10-16T13:00:00').getTime();
+
       // --- View Navigation State ---
       const views = [
         'view-cover',
@@ -1344,7 +1348,6 @@
       let noteTimer = null;
       let noteIndex = 0;
 
-      // "Happy Birthday to You" Melody + Chords (Warm Music Box / Kalimba style)
       const happyBirthdaySequence = [
         // Phrase 1: Hap-py birth-day to you
         { m: 261.63, c: 174.61, d: 340 },
@@ -1466,17 +1469,47 @@
         }
       }
 
-      // --- Event Listeners ---
       const btnMusicToggle = document.getElementById('btnMusicToggle');
       if (btnMusicToggle) {
         btnMusicToggle.addEventListener('click', toggleMusic);
       }
 
-      // Cover Open Button & Envelope
+      // --- Time Check & Countdown Logic ---
+      const unlockCountdownEl = document.getElementById('unlockCountdown');
+
+      function checkUnlockTimer() {
+        const now = new Date().getTime();
+        if (now < TARGET_UNLOCK_TIME) {
+          const diff = TARGET_UNLOCK_TIME - now;
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+          if (unlockCountdownEl) {
+            unlockCountdownEl.textContent = `Bisa dibuka pada 16 Okt 2026 pukul 13:00 (${hours}j ${minutes}m ${seconds}d lagi)`;
+          }
+        } else {
+          // Waktu sudah lewat jam 13.00, hapus/hilangkan elemen waktu sepenuhnya
+          if (unlockCountdownEl) {
+            unlockCountdownEl.remove();
+          }
+        }
+      }
+
+      setInterval(checkUnlockTimer, 1000);
+      checkUnlockTimer();
+
+      // Cover Open Button & Envelope Handler with Time Lock
       const btnOpenCover = document.getElementById('btnOpenCover');
       const coverEnvelopeClick = document.getElementById('coverEnvelopeClick');
 
       function handleOpenCover() {
+        const now = new Date().getTime();
+        if (now < TARGET_UNLOCK_TIME) {
+          initAudio();
+          playMusicBoxTone(196.00, 220, 0.15);
+          alert("Belum jam 13.00 tanggal 16 Oktober 2026 ya sayang! Sabar sebentar lagi yaa 💗");
+          return;
+        }
         startMusic();
         showView('view-beranda', false);
       }
@@ -1686,7 +1719,6 @@
             c.classList.remove('playing');
           });
           card.classList.add('playing');
-          // Reset melody to start and ensure default music plays
           noteIndex = 0;
           if (!isPlayingMusic) {
             startMusic();
